@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = "gust_translation_checker"
+  s.name        = "translation-checker"
   s.version     = "0.0.1"
   s.summary     = "Find missing interpolation variables and missing keys across localizations."
   s.date        = "2013-02-18"
