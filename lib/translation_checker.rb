@@ -14,7 +14,7 @@ class TranslationChecker < Struct.new(:language)
   def interpolation_keys
     @_interpolation_keys ||= Hash[
       translations.map do |key, value|
-        [key, value.to_s.scan(/%{(.*?)}/).flatten.sort]
+        [key, value.to_s.scan(/%{(.*?)}/).flatten.sort.uniq]
       end.select do |key, value|
         value.present?
       end.sort
